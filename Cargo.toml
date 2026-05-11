@@ -1,0 +1,20 @@
+[package]
+name = "embedded-tls-hardware"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Hardware acceleration for embedded-tls on many chips."
+documentation = "https://docs.rs/embedded-tls-hardware"
+repository = "https://github.com/hal-drv/embedded-tls-hardware"
+keywords = ["embedded-tls"]
+readme = "README.md"
+
+[dependencies]
+embedded-tls = { version = ">=0.17, <0.19", default-features = false }
+aes-gcm = { version = "0.10", default-features = false }
+cipher = "0.4"
+digest = "0.10"
+esp-hal = { version = ">=1.0, <1.2", features = ["requires-unstable"], optional = true }
+
+[features]
+esp-hal = ["dep:esp-hal"]
