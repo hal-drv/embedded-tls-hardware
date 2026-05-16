@@ -10,10 +10,11 @@ keywords = ["embedded-tls"]
 readme = "README.md"
 
 [dependencies]
-embedded-tls = { version = ">=0.17, <0.19", default-features = false }
-aes-gcm = { version = "0.10", default-features = false }
-cipher = "0.4"
-digest = "0.10"
+embedded-tls = { version = ">=0.17, <0.20", default-features = false }
+# embedded-tls = { git = "https://github.com/drogue-iot/embedded-tls", rev = "bd13e11ce9c7605baf7018ef2b0f353ae6693016", version = "0.19", default-features = false, features = ["rsa"] }
+aes-gcm = { version = "0.10", default-features = false } # old version, fit embedded-tls 0.18
+cipher = "0.4" # old version
+digest = "0.10" # old version
 esp-hal = { version = ">=1.0, <1.2", features = ["requires-unstable"], optional = true }
 
 [features]
